@@ -1,7 +1,7 @@
 ## HRDecoder: High-Resolution Decoder Network for Fundus Image Lesion Segmentation
 
 ### Environment
-Our code is implemented based on [MMsegmentation](https://github.com/open-mmlab/mmsegmentation).
+Our code is based on [MMsegmentation](https://github.com/open-mmlab/mmsegmentation).
 
 In this work, we used:
 - python=3.8.5
