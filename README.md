@@ -14,9 +14,7 @@ The environment can be installed with:
 conda create -n hrdecoder python=3.8.5
 conda activate hrdecoder
 
-pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2
-pip install -U openmim
-mim install mmcv==1.7.1
+pip install -r requirements.txt
 ```
 
 ### Datasets
