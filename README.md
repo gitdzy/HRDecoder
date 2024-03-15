@@ -114,7 +114,7 @@ The trained model will be stored to `work_dirs/`.
 
 In this project, we supply two version of implemention: HRDecoder and Efficient-HRDecoder.
 
-HRDecoder is the version utilized for presenting the results in our paper. While Efficient-HRDecoder is an improved version of HRDecoder to further reduce computational overhead and memory usage. We simply compress the dimension of the extracted features using a 1x1 convolutional layer right after the backbone. This helps save a lot of memory. The compression operation can be replaced with various multi-scale feature fusion methods, such as FPN, CATNet, APPNet, CARAFE++ and so on. We do not focus on these part but on the later HRL and HFF module, so we simply upsample and concat in HRDecoder, or use a 1x1 conv in Efficient-HRDecoder. Our design is orthogonal to these methods, so it is easy to apply to other existing methods. HRDecoder can not only save costs but also enhance performance.
+HRDecoder is the version utilized for presenting the results in our paper. While Efficient-HRDecoder is an improved version of HRDecoder to further reduce computational overhead and memory usage. We simply compress the dimension of the extracted features using a 1x1 convolutional layer right after the backbone. This helps save a lot of memory. The compression operation can be replaced with various multi-scale feature fusion methods, such as FPN, CATNet, APPNet, CARAFE++ and so on. We do not focus on this part but on the later HRL and HFF module, so we simply upsample and concat in HRDecoder, or use a 1x1 conv in Efficient-HRDecoder. Our design is orthogonal to these methods, so it is easy to apply to other existing methods. HRDecoder can not only save costs but also enhance performance.
 
 
 ### Acknowledgements
