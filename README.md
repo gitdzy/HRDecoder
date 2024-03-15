@@ -58,8 +58,8 @@ Then the structure of dataset will be converted to:
 ```
 IDRiD(segmentation part)
 |——images
-|	|——train
-|	|	|——IDRiD_01.jpg
+||——train
+|||——IDRiD_01.jpg
 |	|	|——IDRiD_02.jpg
 |	|	|——...
 |	|	|——IDRiD_54.jpg
