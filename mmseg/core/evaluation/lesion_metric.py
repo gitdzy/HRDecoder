@@ -170,7 +170,7 @@ def sigmoid_metrics(results, gt_seg_maps, num_classes, compute_aupr=False):
     return total_p, total_tp, total_fn, maupr, mae
 
 
-def metrics(results, gt_seg_maps, num_classes, ignore_index=None, nan_to_num=None):
+def lesion_metrics(results, gt_seg_maps, num_classes, ignore_index=None, nan_to_num=None):
     """
     :param results: feature map after sigmoid of softmax
     """
@@ -215,7 +215,7 @@ if __name__ == '__main__':
     pred = [(np.random.random([num_classes, shape[0], shape[1]]), use_sigmoid, aupr) for i in range(num)]
     label = [np.random.randint(0, num_classes + 1, shape) for i in range(num)]
 
-    res = metrics(pred, label, num_classes + 1)
+    res = lesion_metrics(pred, label, num_classes + 1)
     for i in res: print(i)
 
     # x = np.random.random(10)
