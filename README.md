@@ -27,26 +27,26 @@ Please first change the original structure of datasets and organize like this:
 ```
 IDRiD(segmentation part)
 |——images
-|	|——train
-|	|	|——IDRiD_01.jpg
-|	|	|——...
-|	|	|——IDRiD_54.jpg
-|	|——test
-|	|	|——...
+|  |——train
+|  |  |——IDRiD_01.jpg
+|  |  |——...
+|  |  |——IDRiD_54.jpg
+|  |——test
+|  |  |——...
 |——labels
-|	|——train
-|	|	|——EX
-|	|	|	|——IDRiD_01.tiff
-|	|	|	|——...
-|	|	|	|——IDRiD_54.tiff
-|	|	|——HE
-|	|	|	|——...
-|	|	|——SE
-|	|	|	|——...
-|	|	|——MA
-|	|	|	|——...
-|	|——test
-|	|	|——...
+|  |——train
+|  |  |——EX
+|  |  |	 |——IDRiD_01.tiff
+|  |  |	 |——...
+|  |  |  |——IDRiD_54.tiff
+|  |  |——HE
+|  |  |	 |——...
+|  |  |——SE
+|  |  |	 |——...
+|  |  |——MA
+|  |  |  |——...
+|  |——test
+|  |  |——...
 ```
 
 Please note that the original GT with `.tiff` format can not be directly used for training, so you can use the following command to convert the labels to `.png` format:
@@ -58,21 +58,21 @@ Then the structure of dataset will be converted to:
 ```
 IDRiD(segmentation part)
 |——images
-||——train
-|||——IDRiD_01.jpg
-|	|	|——IDRiD_02.jpg
-|	|	|——...
-|	|	|——IDRiD_54.jpg
-|	|——test
-|	|	|——...
+|  |——train
+|  |  |——IDRiD_01.jpg
+|  |  |——IDRiD_02.jpg
+|  |  |——...
+|  |  |——IDRiD_54.jpg
+|  |——test
+|  |  |——...
 |——labels
-|	|——train
-|	|	|——IDRiD_01.png
-|	|	|——IDRiD_02.png
-|	|	|——...
-|	|	|——IDRiD_54.png
-|	|——test
-|	|	|——...
+|  |——train
+|  |  |——IDRiD_01.png
+|  |  |——IDRiD_02.png
+|  |  |——...
+|  |  |——IDRiD_54.png
+|  |——test
+|  |  |——...
 ```
 
 Finally the structure of the project should be like this:
@@ -82,20 +82,20 @@ HRDecoder
 |——mmseg
 |——tools
 |——data
-|	|——IDRiD(segmentation part)
-|	|	|——images
-|	|	|	|——train
-|	|	|	|——test
-|	|	|——labels
-|	|	|	|——train
-|	|	|	|——test
-|	|——DDR(segmentation part)
-|	|	|——images
-|	|	|	|——train
-|	|	|	|——test
-|	|	|——labels
-|	|	|	|——train
-|	|	|	|——test
+|  |——IDRiD(segmentation part)
+|  |  |——images
+|  |  |  |——train
+|  |  |  |——test
+|  |  |——labels
+|  |  |  |——train
+|  |  |  |——test
+|  |——DDR(segmentation part)
+|  |  |——images
+|  |  |  |——train
+|  |  |  |——test
+|  |  |——labels
+|  |  |  |——train
+|  |  |  |——test
 ```
 
 ### Training and Testing
