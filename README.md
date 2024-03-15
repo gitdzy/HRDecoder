@@ -118,3 +118,7 @@ The trained model will be stored to `work_dirs/`.
 In this project, we supply two version of implemention: HRDecoder and Efficient-HRDecoder.
 
 HRDecoder is the version utilized for presenting the results in our paper. While Efficient-HRDecoder is an improved version of HRDecoder to further reduce computational overhead and memory usage. Specifically, we simply compress the dimension of the extracted features using a 1x1 convolutional layer right after the backbone. This helps save a lot of memory.
+
+
+
+
