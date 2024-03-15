@@ -72,9 +72,13 @@ HRDecoder
 To train or test a model using MMsegmentation framework, you can use commands like this:
 ```
 # train
+CUDA_VISIBLE_DEVICES=0,1,2,3 PORT=18940 tools/dist_train.sh configs/lesion/hrdecoder_fcn_hr48_idrid_2880x1920-slide.py 4
+or
 CUDA_VISIBLE_DEVICES=0,1,2,3 PORT=18940 tools/dist_train.sh configs/lesion/efficient-hrdecoder_fcn_hr48_idrid_2880x1920-slide.py 4
 
 # test
+CUDA_VISIBLE_DEVICES=4,5,6,7 PORT=17940 tools/dist_test.sh configs/lesion/hrdecoder_fcn_hr48_idrid_2880x1920-slide.py work_dirs/hrdecoder_fcn_hr48_idrid_2880x1920-slide/latest.pth 4 --eval mIoU
+or
 CUDA_VISIBLE_DEVICES=4,5,6,7 PORT=17940 tools/dist_test.sh configs/lesion/efficient-hrdecoder_fcn_hr48_idrid_2880x1920-slide.py work_dirs/efficient-hrdecoder_fcn_hr48_idrid_2880x1920-slide/latest.pth 4 --eval mIoU
 ```
 
