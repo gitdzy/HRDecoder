@@ -29,24 +29,52 @@ IDRiD(segmentation part)
 |  |  |——...
 |  |  |——IDRiD_54.jpg
 |  |——test
-|  |  |——...
 |——labels
 |  |——train
 |  |  |——EX
-|  |  |	 |——IDRiD_01.tiff
+|  |  |	 |——IDRiD_01.tif
 |  |  |	 |——...
-|  |  |  |——IDRiD_54.tiff
+|  |  |  |——IDRiD_54.tif
 |  |  |——HE
-|  |  |	 |——...
 |  |  |——SE
-|  |  |	 |——...
 |  |  |——MA
-|  |  |  |——...
 |  |——test
+|  |  |——EX
+|  |  |——HE
+|  |  |——SE
+|  |  |——MA
+
+
+DDR(segmentation part)
+|——images
+|  |——test
+|  |  |——007-1789-100.jpg
 |  |  |——...
+|  |  |——20170627170651362.jpg
+|  |——val
+|  |——train
+|——labels
+|  |——test
+|  |  |——EX
+|  |  |  |——007-1789-100.tif
+|  |  |  |——...
+|  |  |  |——20170627170651362.tif
+|  |  |——HE
+|  |  |——MA
+|  |  |——SE
+|  |——val
+|  |  |——EX
+|  |  |——HE
+|  |  |——MA
+|  |  |——SE
+|  |——train
+|  |  |——EX
+|  |  |——HE
+|  |  |——MA
+|  |  |——SE
 ```
 
-Please note that the original GT with `.tiff` format can not be directly used for training, so you can use the following command to convert the labels to `.png` format:
+Please note that the original GT with `.tif` format can not be directly used for training, so you can use the following command to convert the labels to `.png` format:
 ```
 python tools/convert_dataset/idrid.py
 python tools/convert_dataset/ddr.py
