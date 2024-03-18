@@ -32,9 +32,9 @@ IDRiD(segmentation part)
 |——labels
 |  |——train
 |  |  |——EX
-|  |  |	 |——IDRiD_01.tif
+|  |  |	 |——IDRiD_01_EX.tif
 |  |  |	 |——...
-|  |  |  |——IDRiD_54.tif
+|  |  |  |——IDRiD_54_EX.tif
 |  |  |——HE
 |  |  |——SE
 |  |  |——MA
@@ -85,19 +85,32 @@ IDRiD(segmentation part)
 |——images
 |  |——train
 |  |  |——IDRiD_01.jpg
-|  |  |——IDRiD_02.jpg
 |  |  |——...
 |  |  |——IDRiD_54.jpg
 |  |——test
-|  |  |——...
 |——labels
 |  |——train
 |  |  |——IDRiD_01.png
-|  |  |——IDRiD_02.png
 |  |  |——...
 |  |  |——IDRiD_54.png
 |  |——test
+
+
+DDR(segmentation part)
+|——images
+|  |——test
+|  |  |——007-1789-100.jpg
 |  |  |——...
+|  |  |——20170627170651362.jpg
+|  |——val
+|  |——train
+|——labels
+|  |——test
+|  |  |——007-1789-100.png
+|  |  |——...
+|  |  |——20170627170651362.png
+|  |——val
+|  |——train
 ```
 
 Finally the structure of the project should be like this:
@@ -117,9 +130,11 @@ HRDecoder
 |  |——DDR(segmentation part)
 |  |  |——images
 |  |  |  |——train
+|  |  |  |——val
 |  |  |  |——test
 |  |  |——labels
 |  |  |  |——train
+|  |  |  |——val
 |  |  |  |——test
 ```
 
