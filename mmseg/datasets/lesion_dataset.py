@@ -73,7 +73,7 @@ class LesionDataset(CustomDataset):
         summary_str = ''
         summary_str += 'per class results:\n'
 
-        line_format = '{:<15} {:>10} {:>10} {:>10} {:>10} {:>10} {:>10} {:>10}\n'
+        line_format = '{:<15} {:>10} {:>10} {:>10} {:>10} {:>10} {:>10}\n'
         summary_str += line_format.format('Class', 'IoU', 'F1', 'PPV', 'S', 'AUPR','MAE(e-2)')
         #========================================================
         if self.CLASSES is None:
