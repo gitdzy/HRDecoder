@@ -1,5 +1,5 @@
 _base_ = [
-    '../_base_/models/hrdecoder_fcn_hr48.py',
+    '../_base_/models/efficient-hrdecoder_fcn_hr48.py',
     '../_base_/datasets/hr_idrid_2880x1920-slide.py',
     '../_base_/default_runtime.py',
     '../_base_/schedules/sgd.py',
